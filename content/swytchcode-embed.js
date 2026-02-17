@@ -16,7 +16,7 @@
     inline:
       typeof globalConfig.inline === "boolean" ? globalConfig.inline : true,
     buttonLabel: globalConfig.buttonLabel || "Ask SwytchCode",
-    // inlineLabel: globalConfig.inlineLabel || "Ask SwytchCode about this code",
+    inlineLabel: globalConfig.inlineLabel || "Ask SwytchCode about this code",
     zIndex: Number(globalConfig.zIndex || 2147483000),
     offset: Number(globalConfig.offset || 24),
     autoOpen: !!globalConfig.autoOpen,
@@ -170,10 +170,10 @@
 
         block.setAttribute("data-swytchcode-bound", "true");
 
-        // var btn = document.createElement("button");
-        // btn.className = "sc-embed-inline";
-        // btn.type = "button";
-        // btn.textContent = config.inlineLabel;
+        var btn = document.createElement("button");
+        btn.className = "sc-embed-inline";
+        btn.type = "button";
+        btn.textContent = config.inlineLabel;
         btn.addEventListener("click", function (event) {
           var b = event.currentTarget;
           var pre = b && b.previousElementSibling;
